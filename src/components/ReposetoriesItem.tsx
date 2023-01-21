@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Button, Item, Label } from "semantic-ui-react";
 import { ReposetoryItem } from "../types";
 
@@ -26,4 +26,4 @@ const ReposetoriesItem: FC<ReposetoriesItemProps> = (item) => {
     )
 }
 
-export default ReposetoriesItem
+export default memo(ReposetoriesItem)

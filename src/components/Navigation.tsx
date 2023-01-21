@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Container, Menu } from "semantic-ui-react";
 
@@ -28,4 +28,4 @@ const Navigation: FC<Navigation> = ({ children }) => {
     )
 }
 
-export default Navigation
+export default memo(Navigation)

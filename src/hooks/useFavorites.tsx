@@ -11,8 +11,7 @@ function setFavoriteItemsStore(items: ReposetoryItem[]) {
 }
 
 function useFavorites(): [ReposetoryItem[], (item: ReposetoryItem) => void] {
-    const storeItems = getFavoriteItemsStore();
-    const [favoriteItems, setFavoriteItems] = useState<ReposetoryItem[]>(storeItems)
+    const [favoriteItems, setFavoriteItems] = useState<ReposetoryItem[]>(getFavoriteItemsStore())
 
     const toggleFollow = (item: ReposetoryItem) => setFavoriteItems(state => {
         let newState = state

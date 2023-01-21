@@ -1,6 +1,6 @@
+import { FC, memo } from "react"
 import { ReposetoryItem } from "../types"
 import { Item, Segment } from "semantic-ui-react"
-import { FC } from "react"
 import ReposetoriesItem from "./ReposetoriesItem"
 
 interface ReposetoriesProps {
@@ -26,4 +26,4 @@ const Reposetories: FC<ReposetoriesProps> = ({ items, onFollow }) => {
     )
 }
 
-export default Reposetories
+export default memo(Reposetories)

@@ -8,10 +8,8 @@ function useDebounce<T extends ((...args: any) => any)>(func: T, delay = 300) {
         timer.current = setTimeout(() => func(...args), delay)
     }
 
-    useEffect(() => {
-        return () => {
-            clearTimeout(timer.current)
-        }
+    useEffect(() => () => {
+        clearTimeout(timer.current)
     }, [])
 
     return useCallback<(...args: Parameters<T>) => ReturnType<T>>(debounced as (...args: Parameters<T>) => ReturnType<T>, [func, delay])

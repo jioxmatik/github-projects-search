@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo, useCallback } from "react";
 import { Input } from "semantic-ui-react";
 
 interface SearchInputProps {
@@ -7,12 +7,12 @@ interface SearchInputProps {
 }
 
 const SearchInput: FC<SearchInputProps> = ({ onChange, isLoading }) => {
-    const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleSearch = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const { target: { value } } = event
         onChange(value)
-    }
+    }, [onChange])
 
     return <Input placeholder="Search" loading={isLoading} icon='search' onChange={handleSearch} />
 }
 
-export default SearchInput
+export default memo(SearchInput)

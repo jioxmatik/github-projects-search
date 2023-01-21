@@ -1,5 +1,5 @@
+import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import useAxios from "axios-hooks"
-import { Dispatch, SetStateAction, useDeferredValue, useEffect, useState } from "react"
 import { ReposetoryItem, SearchData, SearchItem } from "../types"
 import useDebounce from "./useDebounce "
 

@@ -10,19 +10,17 @@ interface ReposetoriesProps {
 
 const Reposetories: FC<ReposetoriesProps> = ({ items, onFollow }) => {
     if (!items.length) return (
-        <Segment>
+        <article>
             No Repositories, please start to search them and add to someone to follow
-        </Segment>
+        </article>
     )
 
     return (
-        <Segment>
-            <Item.Group divided>
-                {items.map((item) => (
-                    <ReposetoriesItem key={item.id} onFollow={onFollow} {...item} />
-                ))}
-            </Item.Group>
-        </Segment>
+        <Item.Group divided as="article">
+            {items.map((item) => (
+                <ReposetoriesItem key={item.id} onFollow={onFollow} {...item} />
+            ))}
+        </Item.Group>
     )
 }
 

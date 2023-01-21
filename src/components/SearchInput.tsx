@@ -1,5 +1,5 @@
-import { FC, memo, useCallback } from "react";
-import { Input } from "semantic-ui-react";
+import { FC, memo, useCallback } from "react"
+import { Input } from "semantic-ui-react"
 
 interface SearchInputProps {
     onChange: (value: string) => void
@@ -12,7 +12,7 @@ const SearchInput: FC<SearchInputProps> = ({ onChange, isLoading }) => {
         onChange(value)
     }, [onChange])
 
-    return <Input placeholder="Search" loading={isLoading} icon='search' onChange={handleSearch} />
+    return <Input placeholder="Search" transparent loading={isLoading} size="large" icon='search' onChange={handleSearch} />
 }
 
 export default memo(SearchInput)

@@ -1,6 +1,6 @@
-import { FC, memo } from "react";
-import { Button, Item, Label } from "semantic-ui-react";
-import { ReposetoryItem } from "../types";
+import { FC, memo } from "react"
+import { Button, Item, Label } from "semantic-ui-react"
+import { ReposetoryItem } from "../types"
 
 interface ReposetoriesItemProps extends ReposetoryItem {
     onFollow: (item: ReposetoryItem) => void
@@ -11,7 +11,7 @@ const ReposetoriesItem: FC<ReposetoriesItemProps> = (item) => {
 
     return (
         <Item>
-            <Item.Image size="tiny" src={avatar} />
+            <Item.Image size="tiny" src={avatar} circular />
             <Item.Content>
                 <Item.Header as='a' href={url} target="_blank">{title}</Item.Header>
                 <Item.Description>{description}</Item.Description>

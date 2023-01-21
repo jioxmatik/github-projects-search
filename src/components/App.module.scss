@@ -1,0 +1,22 @@
+$maxWidth: 900px;
+
+.app {
+    display: flex;
+    max-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.appHeader {
+    background-color: white;
+    width: 100%;
+    max-width: $maxWidth;
+    padding: 1em 1.5em;
+}
+.app_container {
+    overflow-y: auto;
+    width: 100%;
+    background-color: white;
+    padding: 1em 1.5em;
+    max-width: $maxWidth;
+}

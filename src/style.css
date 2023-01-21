@@ -13,6 +13,6 @@ body {
     font-weight: bolder;
     font-size: 1.2em;
 }
-.ui.items>.item>.image.circular>img {
-    border-radius: none;
+.ui.items>.item>.image>img {
+    border-radius: inherit;
 }
